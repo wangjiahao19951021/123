@@ -11,6 +11,8 @@
 
     <link rel="stylesheet" href="http://g.alicdn.com/msui/sm/0.6.2/css/sm.min.css">
     <link rel="stylesheet" href="http://g.alicdn.com/msui/sm/0.6.2/css/sm-extend.min.css">
+    <script type='text/javascript' src='http://g.alicdn.com/sj/lib/zepto/zepto.min.js' charset='utf-8'></script>
+
     <style>
       body{
         font-size: 20px;
@@ -266,8 +268,8 @@
 
   </head>
   <body>
-    <div class="page">
-      <div class="content">
+    <div class="page page-current">
+      <div class="content " >
         <!-- 这里是页面内容区 -->
         <div class="content-block">
             <p><a href="#" class="button button-fill return_index">返回首页<img src="images/右.png"></a></p>
@@ -338,6 +340,23 @@
                   <!-- 结束 -->
                   <img src="images/已结束.png">
               </div>
+              <div class="box box_end">
+                  <span>时间: <span>2019-06-21 至 2019-07-23</span></span>
+                  <span>门店: <span>华联查实柳芳地铁站</span></span>
+                  <span>活动内容: <span>华联查实柳芳地铁站</span></span>
+                  <span>活动方式: <span>商品返现</span></span>
+                  <span>活动数量: <span>500件</span></span>
+                  <span>活动预算: <span>2567.00元</span></span>
+                  <span>活动服务费: <span>156468468元</span></span>
+                  <span>总预算: <span>15263465468元</span></span>
+                  <div class="box_bottom_lines"></div>
+                  <div class="box_money">
+                    <span>活动实际费用：<span>26555.22元</span></span>
+                    <button>活动数据</button>
+                  </div>
+                  <!-- 结束 -->
+                  <img src="images/已结束.png">
+              </div>
           </div>
           <!-- 加载提示符 -->
           <div class="infinite-scroll-preloader">
@@ -347,12 +366,13 @@
       </div>
     </div>
 
-    <script type='text/javascript' src='http://g.alicdn.com/sj/lib/zepto/zepto.min.js' charset='utf-8'></script>
     <script type='text/javascript' src='http://g.alicdn.com/msui/sm/0.6.2/js/sm.min.js' charset='utf-8'></script>
     <script type='text/javascript' src='http://g.alicdn.com/msui/sm/0.6.2/js/sm-extend.min.js' charset='utf-8'></script>
 
-    <script src="http://m.12365auto.com/js/jquery-1.7.2.min.js"></script>
+    <!-- <script src="http://m.12365auto.com/js/jquery-1.7.2.min.js"></script> -->
     <script>
+      //一定要初始化，无初始化方法滚动无效
+$.init()
       // 加载flag
       var loading = false;
       // 最多可加载的条目
@@ -389,11 +409,10 @@
       addItems(itemsPerLoad, 0);
 
       // 上次加载的序号
-      var lastIndex = 3;
+      var lastIndex = 4;
 
       // 注册'infinite'事件处理函数
       $(document).on('infinite', '.infinite-scroll-bottom',function() {
-          alert(1)
           // 如果正在加载，则退出
           if (loading) return;
 
