@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>活动</title>
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <link rel="shortcut icon" href="">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+    <link rel="stylesheet" href="http://g.alicdn.com/msui/sm/0.6.2/css/sm.min.css">
+    <link rel="stylesheet" href="http://g.alicdn.com/msui/sm/0.6.2/css/sm-extend.min.css">
+    <style>
+      body{
+        font-size: 20px;
+        background-color: #ffffff;
+      }
+      .button.button-fill{
+        line-height: normal;
+      }
+      .content{
+        background: #ffffff;
+      }
+      .return_index{
+        font-size: 0.55rem;
+        width: 3.775rem;
+        height: 1rem;
+        line-height: 1rem;
+        border-radius: 19px;
+        background-color: #2168fc;
+      }
+      .content-block{
+        margin: 0 auto;
+        text-align: center;
+      }
+      .content-block p{
+        margin: 0 auto;
+        font-family: PingFangSC;
+        font-weight: normal;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: normal;
+        letter-spacing: 0.44px;
+        text-align: left;
+        color: #ffffff;
+      }
+      .return_index{
+        float: right;
+        margin-top: 0.75rem;
+        line-height: 1rem !important;
+        background: #2168fc !important;
+      }
+      .header{
+        width: 92%;
+        height: 5.475rem;
+        background: red;
+        margin: 2.25rem auto 0;
+        background: url("images/活动1背景.png") no-repeat center;
+        background-size: 100% 100%;
+      }
+      .activity_balance{
+        text-align: center;
+        font-size: 1.2rem;
+        font-weight: 600;
+        letter-spacing: 0.96px;
+        color: #ffffff;
+        padding: 0.8rem 0 0.2rem 0;
+        display: block;
+      }
+      .header .activity_balance_bottom{
+        display: block;
+        font-size: 0.55rem;
+        font-weight: normal;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: normal;
+        letter-spacing: 0.44px;
+        text-align: center;
+        color: #ffffff;
+      }
+      .activity_btn{
+        width: 2.65rem;
+        height: 0.85rem;
+        line-height: 0.85rem;
+        border-radius: 10px;
+        border: solid 1px #ffffff !important;
+        font-size: 0.5rem;
+        background: rgba(0, 0, 0, 0);
+        color: #ffffff;
+        margin: 0 0.5rem;
+      }
+      .activity_btn_active{
+        background: #ffffff;
+        color: #2057fb;
+      }
+      .button.button-fill.active, .button.button-fill:active{
+        background: #ffffff !important;
+        color: #2057fb;
+      }
+      .activity_tuiguang{
+        width: 92%;
+        box-shadow: 0px 1px 14px 0 rgba(0, 0, 0, 0.08);
+        height: 5.5rem;
+        margin: 0 auto;
+      }
+      .activity_tuiguang_top{
+        height: 3.125rem;
+      }
+      .activity_tuiguang_bottom{
+        height: 2.375rem;
+        background-color: #f9f9fa;
+      }
+      .activity_tuiguang_top>div{
+        float: left;
+        width: 50%;
+      }
+      .activity_shu{
+        font-size: 0.9rem;
+        font-weight: 600;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: normal;
+        letter-spacing: 0.72px;
+        text-align: center;
+        color: #fc0303;
+        padding: 0.5rem 0 0.3rem 0;
+      }
+      .activity_tuiguang_top div div{
+        width: 6rem;
+      }
+      .box{
+        width: 92%;
+        margin: 0 auto;
+        border-radius: 10px;
+        box-shadow: 0px 1px 14px 0 rgba(0, 0, 0, 0.08);
+        background-color: #ffffff;
+      }
+      .infinite-scroll-preloader {
+        margin-top: -20px;
+      }
+      .boxs .box{
+        margin-top: 0.75rem;
+        padding: 0.75rem 0;
+      }
+      .box>span{
+        display: block;
+        font-size: 0.55rem;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: normal;
+        letter-spacing: 0.44px;
+        text-align: left;
+        color: #333333;
+        line-height: 0.6rem;
+        font-weight: 600;
+        margin: 0.5rem 0;
+        margin-bottom: 0.5rem;
+        line-height: 1.1rem;
+        padding: 0 0.75rem;
+      }
+      .box>span>span{
+        font-weight: normal;        
+        color: #333333;
+      }
+      .activity_feiyong{
+        font-size: 0.5rem;
+        text-align: center;
+        color: #999999;
+      }
+      .box_bottom_lines{
+        width: 100%;
+        height: 2px;
+        background-color: #f5f5f5;
+      }
+      .box_money{
+        padding: 1rem 0.75rem;
+      }
+      .box_money>span{
+        float: left;
+        font-size: 0.55rem;
+        letter-spacing: 0.44px;
+        text-align: left;
+        color: #fc0202;
+      }
+      .box_money button{
+        float: right;
+        padding: 0 0.1rem;
+        height: 1rem;
+        border-radius: 20px;
+        border: solid 1px #2057fb;
+        background-color: #2168fc;
+        font-size: 0.5rem;
+        color: #ffffff;
+      }
+      .box_end{
+        position: relative;
+        overflow: hidden;
+      }
+      .box_end>span{
+        color: #999999;
+      }
+      .box_end>span>span{
+        color: #999999;
+      }
+      .box_end .box_money span{
+        color: #999999;
+      }
+      .box_end img{
+        position: absolute;
+        top: 0;
+        right: 0.5rem;
+        width: 2.725rem;
+        height: 1.925rem;
+      }
+      .activity_tuiguang_top button{
+        height: 1rem;
+        border-radius: 10px;
+        background-color: #ffffff;
+        font-size: 0.5rem;
+        padding: 0 0.2rem;
+        border: 1px solid #2057fb;
+        color: #2057fb;
+        /* margin: 1rem 0 0 5rem; */
+        float: right;
+        margin: 1rem;
+      }
+      .activity_tuiguang_bottom>div{
+        float: left;
+      }
+      .activity_tuiguang_bottom>div:nth-of-type(1){
+        width: 49.5%;
+      }
+      .activity_tuiguang_bottom>div:nth-of-type(2){
+        width: 2px;
+        height: 1.25rem;
+        background-color: #e5e5e5;
+        margin-top: 0.5625rem;
+      }
+      .activity_tuiguang_bottom>div:nth-of-type(3){
+        width: 49.5%;
+      }
+      .frequency_t{
+        font-weight: 500;
+        font-size: 0.7rem;
+        color: #333333;
+        text-align: center;
+        padding-top: 0.3rem;
+      }
+      .frequency_b{
+        font-size: 0.5rem;
+        color: #999999;
+        text-align: center;
+      }
+      .content-block p a{
+        display: flex;
+        justify-content: center;
+      }
+      .content-block p a img{
+        width: 0.3rem;
+        height: 0.55rem;
+        margin: 0.25rem;
+      }
+    </style>
+
+  </head>
+  <body>
+    <div class="page">
+      <div class="content">
+        <!-- 这里是页面内容区 -->
+        <div class="content-block">
+            <p><a href="#" class="button button-fill return_index">返回首页<img src="images/右.png"></a></p>
+        </div>
+        <div class="header">
+          <span class="activity_balance">18967.00</span>
+          <span class="activity_balance_bottom">账户余额</span>
+          <div class="content-block">
+            <button class="activity_btn">明细</button>  
+            <button class="activity_btn activity_btn_active">充值</button>  
+          </div>
+        </div>
+        <div class="activity_tuiguang">
+          <div class="activity_tuiguang_top">
+              <div>
+                  <div class="activity_shu">14780.00</div>
+                  <div class="activity_feiyong">活动费用(元)</div>
+              </div>
+              <div>
+                  <button>新活动</button>
+              </div>
+          </div>
+          <div class="activity_tuiguang_bottom">
+            <div>
+              <div class="frequency_t">15</div>
+              <div class="frequency_b">活动次数(次)</div>
+            </div>
+            <div></div>
+            <div>
+                <div class="frequency_t">9</div>
+                <div class="frequency_b">活动次数(次)</div>
+            </div>
+          </div>
+        </div>
+         <!-- 添加 class infinite-scroll 和 data-distance  向下无限滚动可不加infinite-scroll-bottom类，这里加上是为了和下面的向上无限滚动区分-->
+        <div class="infinite-scroll infinite-scroll-bottom" data-distance="100">
+          <div class="boxs">
+              <div class="box">
+                  <span>时间: <span>2019-06-21 至 2019-07-23</span></span>
+                  <span>门店: <span>华联查实柳芳地铁站</span></span>
+                  <span>活动内容: <span>华联查实柳芳地铁站</span></span>
+                  <span>活动方式: <span>商品返现</span></span>
+                  <span>活动数量: <span>500件</span></span>
+                  <span>活动预算: <span>2567.00元</span></span>
+                  <span>活动服务费: <span>156468468元</span></span>
+                  <span>总预算: <span>15263465468元</span></span>
+                  <div class="box_bottom_lines"></div>
+                  <div class="box_money">
+                    <span>活动实际费用：<span>活动进行中，费用待结算</span></span>
+                    <button>活动数据</button>
+                  </div>
+              </div>
+              <!-- 已结束box_end -->
+              <div class="box box_end">
+                  <span>时间: <span>2019-06-21 至 2019-07-23</span></span>
+                  <span>门店: <span>华联查实柳芳地铁站</span></span>
+                  <span>活动内容: <span>华联查实柳芳地铁站</span></span>
+                  <span>活动方式: <span>商品返现</span></span>
+                  <span>活动数量: <span>500件</span></span>
+                  <span>活动预算: <span>2567.00元</span></span>
+                  <span>活动服务费: <span>156468468元</span></span>
+                  <span>总预算: <span>15263465468元</span></span>
+                  <div class="box_bottom_lines"></div>
+                  <div class="box_money">
+                    <span>活动实际费用：<span>26555.22元</span></span>
+                    <button>活动数据</button>
+                  </div>
+                  <!-- 结束 -->
+                  <img src="images/已结束.png">
+              </div>
+          </div>
+          <!-- 加载提示符 -->
+          <div class="infinite-scroll-preloader">
+              <div class="preloader"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script type='text/javascript' src='http://g.alicdn.com/sj/lib/zepto/zepto.min.js' charset='utf-8'></script>
+    <script type='text/javascript' src='http://g.alicdn.com/msui/sm/0.6.2/js/sm.min.js' charset='utf-8'></script>
+    <script type='text/javascript' src='http://g.alicdn.com/msui/sm/0.6.2/js/sm-extend.min.js' charset='utf-8'></script>
+
+    <script src="http://m.12365auto.com/js/jquery-1.7.2.min.js"></script>
+    <script>
+      // 加载flag
+      var loading = false;
+      // 最多可加载的条目
+      var maxItems = 100;
+
+      // 每次加载添加多少条目
+      var itemsPerLoad = 1;
+
+      function addItems(number, lastIndex) {
+              // 生成新条目的HTML
+              var html = '';
+              for (var i = lastIndex + 1; i <= lastIndex + number; i++) {
+                  html +=  `<div class="box">
+                  <span>时间: <span>2019-06-21 至 2019-07-23</span></span>
+                  <span>门店: <span>华联查实柳芳地铁站</span></span>
+                  <span>活动内容: <span>华联查实柳芳地铁站</span></span>
+                  <span>活动方式: <span>商品返现</span></span>
+                  <span>活动数量: <span>500件</span></span>
+                  <span>活动预算: <span>2567.00元</span></span>
+                  <span>活动服务费: <span>156468468元</span></span>
+                  <span>总预算: <span>15263465468元</span></span>
+                  <div class="box_bottom_lines"></div>
+                  <div class="box_money">
+                    <span>活动实际费用：活动进行中，费用待结算</span>
+                    <button>活动数据</button>
+                  </div>
+              </div>`;
+              }
+              // 添加新条目
+              $('.boxs').append(html);
+
+          }
+          //预先加载n条
+      addItems(itemsPerLoad, 0);
+
+      // 上次加载的序号
+      var lastIndex = 0;
+
+      // 注册'infinite'事件处理函数
+      $(document).on('infinite', '.infinite-scroll-bottom',function() {
+console.log(11);
+          // 如果正在加载，则退出
+          if (loading) return;
+
+          // 设置flag
+          loading = true;
+          // alert(1);
+
+          // 模拟1s的加载过程
+          setTimeout(function() {
+              // 重置加载flag
+              loading = false;
+
+              if (lastIndex >= maxItems) {
+                  // 加载完毕，则注销无限加载事件，以防不必要的加载
+                  $.detachInfiniteScroll($('.infinite-scroll'));
+                  // 删除加载提示符
+                  $('.infinite-scroll-preloader').remove();
+                  return;
+              }
+              // 添加新条目
+              addItems(itemsPerLoad, lastIndex);
+              // 更新最后加载的序号
+              lastIndex = $('.boxs .box').length;
+              //容器发生改变,如果是js滚动，需要刷新滚动
+              $.refreshScroller();
+          }, 1000);
+      });
+
+      $(function () {
+        ;(function () {
+          // 点击活动数据
+          $(".box_money").click(function () {
+            alert("还没有页面");
+            return false;
+            window.location.href = "./shanghu_tanchuang1.html"
+          })
+        })()
+      })
+    </script>
+  </body>
+</html>

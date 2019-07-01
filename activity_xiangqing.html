@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>活动数据</title>
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum=1.0,minimum=1.0,user-scalable=0" />
+
+    <link rel="shortcut icon" href="">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+    <link rel="stylesheet" href="http://g.alicdn.com/msui/sm/0.6.2/css/sm.min.css">
+    <link rel="stylesheet" href="http://g.alicdn.com/msui/sm/0.6.2/css/sm-extend.min.css">
+    <style>
+      body{
+        font-size: 20px;
+        background-color: #ffffff;
+        line-height: normal;
+      }
+      .content{
+        background-color: #ffffff;
+      }
+      .headers{
+          width: 92%;
+          min-height: 9.25rem;
+          margin: 0 auto;
+          background: url("images/首页2-没有地图.png") no-repeat center;
+          background-size: 100% 100%;
+          padding: 0.1rem 0;
+      }
+      .box{
+        width: 92%;
+        margin: 0 auto;
+        border-radius: 10px;
+        /* box-shadow: 0px 1px 14px 0 rgba(0, 0, 0, 0.08); */
+        padding-top: 0.15rem;
+      }
+      .infinite-scroll-preloader {
+        margin-top: -20px;
+      }
+      .boxs .box{
+        margin-top: 0.75rem;
+        padding: 0.75rem 0;
+      }
+      .box>span{
+        display: block;
+        font-size: 0.55rem;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: normal;
+        letter-spacing: 0.44px;
+        text-align: left;
+        color: #ffffff;
+        line-height: 0.6rem;
+        font-weight: 600;
+        margin: 0.5rem 0;
+        margin-bottom: 0.5rem;
+        line-height: 0.5rem;
+        padding: 0 0.75rem;
+      }
+      .box>span>span{
+        font-weight: normal;        
+        color: #ffffff;
+      }
+      .huiyuan{
+        width: 92%;
+        margin: 0.4rem auto 0;
+        background: #ffffff;
+        box-shadow: 0px 1px 14px 0 rgba(0, 0, 0, 0.08);
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        padding: 0.8rem 0 1rem 0;
+      }
+      .huiyuan_xiangqing{
+        width: 100%;
+        margin: 0 auto;
+        height: 2.05rem;
+      }
+      .huiyuan_xiangqing>div{
+        float: left;
+        text-align: center;
+      }
+      .huiyuan_xiangqing>div:nth-child(1){
+        width: 49.5%;
+        height: 2.05rem;
+      }
+      .huiyuan_xiangqing div{
+        font-size: 0.6rem;
+        color: #2057fb;
+        font-weight: 0;
+      }
+      .huiyuan_xiangqing div .huiyuan_xiangqing1{
+        font-size: 1rem;
+        font-weight: 600;
+        color: #333333;
+      }
+      .huiyuan_xiangqing div:nth-child(2){
+        width: 2px;
+        height: 2.05rem;
+        background: #e5e5e5;
+      }
+      .huiyuan_xiangqing div:nth-child(3){
+        width: 49.5%;
+        height: 2.05rem;
+      }
+      .lines{
+        width: 92%;
+        height: 0.25rem;
+        background: #f6f6f6;
+        margin: 0 auto;
+      }
+      .highchr{
+        width: 92%;
+        background: white;
+        margin: 0 auto;
+        box-shadow: 0px 1px 14px 0 rgba(0, 0, 0, 0.08);
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+        padding-bottom: 0.8rem;
+      }
+      table{
+        border: 1px solid #e1e1e1;
+        width: 100%;
+      }
+      table td,table th{
+        border: 1px solid #e1e1e1;
+      }
+      table th{
+        font-size: 0.65rem;
+        letter-spacing: 0.52px;
+        text-align: center;
+        font-weight: normal;
+        color: #2168fc;
+        line-height: 1.5rem;
+      }
+      table td{
+        font-size: 0.5rem;
+        color: #333333;
+        text-align: center;
+        line-height: 2rem;
+      }
+      .close_btn{
+        width: 96%;
+        margin: 0 auto;
+        border-radius: 44px;
+        background-color: #2057fb !important;
+        line-height: 2.2rem !important;
+        height: 2.2rem !important;
+        font-size: 0.8rem;
+        color: #ffffff;
+      }
+      thead th:nth-child(1){
+        width: 40%;
+      }
+      thead th:nth-child(2){
+        width: 20%;
+      }
+      thead th:nth-child(3){
+        width: 20%;
+      }
+      thead th:nth-child(4){
+        width: 20%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="page">
+        <div class="content">
+            <!-- 这里是页面内容区 -->
+            <div class="headers">
+                <!-- 内容 -->
+                <div class="box">
+                    <span>时间: <span>2019-06-21 至 2019-07-23</span></span>
+                    <span>门店: <span>华联查实柳芳地铁站</span></span>
+                    <span>活动内容: <span>华联查实柳芳地铁站</span></span>
+                    <span>活动方式: <span>商品返现</span></span>
+                    <span>活动数量: <span>500件</span></span>
+                    <span>活动预算: <span>2567.00元</span></span>
+                    <span>活动服务费: <span>156468468元</span></span>
+                    <span>总预算: <span>15263465468元</span></span>
+                    <span>活动实际费用: <span>活动进行中，待结算</span></span>
+                </div>
+                <div></div>
+            </div>
+            <section class="huiyuan">
+              <section class="huiyuan_xiangqing">
+                <div>
+                  <span class="huiyuan_xiangqing1">1234586</span><br>
+                  <span class="huiyuan_xiangqing2">触达会员(人)</span>
+                </div>
+                <div></div>
+                <div>
+                  <span class="huiyuan_xiangqing1">6725455458</span><br>
+                  <span class="huiyuan_xiangqing2">销售额(件)</span>
+                </div>
+              </section>
+            </section>
+            <section class="lines"></section>
+            <!-- 图标部分 -->
+            <section class="highchr">
+              <!-- 图表 -->
+              <div class="highchrs_top">
+                  <div id="container" style="width: 335px;height:220px;pointer-events: none;"></div>
+              </div>
+              <div class="highchrs_bottom">
+                <table>
+                  <thead>
+                    <th>日期</th>
+                    <th>销售额(件)</th>
+                    <th>人均(件)</th>
+                    <th>返现金额</th>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>2019-06-07</td>
+                      <td>12357</td>
+                      <td>456</td>
+                      <td>565.00</td>
+                    </tr>
+                    <tr>
+                      <td>2019-06-07</td>
+                      <td>12357</td>
+                      <td>456</td>
+                      <td>565.00</td>
+                      </tr>
+                  </tbody>
+                </table>
+              </div>
+            </section>
+            <!-- 按钮 -->
+            <div class="content-block">
+                <p><a href="#" class="button button-fill close_btn">关闭</a></p>
+              </div>
+        </div>
+    </div>
+    <script type='text/javascript' src='http://g.alicdn.com/sj/lib/zepto/zepto.min.js' charset='utf-8'></script>
+    <script type='text/javascript' src='http://g.alicdn.com/msui/sm/0.6.2/js/sm.min.js' charset='utf-8'></script>
+    <script type='text/javascript' src='http://g.alicdn.com/msui/sm/0.6.2/js/sm-extend.min.js' charset='utf-8'></script>
+    <script src="http://cdn.highcharts.com.cn/highcharts/highcharts.js"></script>
+    <script>
+        //折线图
+    var chart = Highcharts.chart('container', {
+        credits:{
+            enabled: false // 禁用版权信息
+        },
+        chart: {
+            type: 'line'
+        },
+        title: {
+            text: ''
+        },
+        xAxis: {
+            categories: ['06-02', '06-03', '06-04', '06-05', '06-06', '06-07']
+        },
+        yAxis: {
+            title: {
+                text: ''
+            }
+        },
+        legend: {
+            layout: 'horizontal',
+            align: 'center',
+            verticalAlign: 'top'
+        },
+        plotOptions: {
+            line: {
+                dataLabels: {
+                    // 开启数据标签
+                    enabled: false
+                },
+                // 关闭鼠标跟踪，对应的提示框、点击事件会失效
+                enableMouseTracking: false
+            }
+        },
+        series: [{
+            name: '销售额',
+            data: [7.0, 6.9, 9.5, 14.5, 18.4, 55.5]
+        }, {
+            name: '返现金额',
+            data: [3.9, 4.2, 5.7, 8.5, 11.9, 15.2]
+        }]
+    });
+</script>
+  </body>
+</html>

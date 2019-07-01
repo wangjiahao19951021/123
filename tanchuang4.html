@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>新活动</title>
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <link rel="shortcut icon" href="">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+    <link rel="stylesheet" href="http://g.alicdn.com/msui/sm/0.6.2/css/sm.min.css">
+    <link rel="stylesheet" href="http://g.alicdn.com/msui/sm/0.6.2/css/sm-extend.min.css">
+    <style>
+      body{
+        font-size: 20px;
+        background-color: #ffffff;
+        line-height: normal;
+      }
+      .content{
+        background-color: #ffffff;
+      }
+      .popup-about{
+        width: 84%;
+        left: 8%;
+        top: 6.5rem;
+        overflow: initial;
+        height: 13.4rem;
+        border-radius: 10px;
+        background-color: #ffffff;
+      }
+      .closes{
+        position: absolute;
+        bottom: -32%;
+        left: 50%;
+        transform: translateX(-50%);
+        border-radius: 50%;
+        width: 2rem;
+        height: 2rem;
+        background: url("images/close_btn.png") no-repeat center;
+        background-size: 100% 100%;
+        border: 1px solid #ffffff;
+      }
+      .bgs{
+          width: 100%;
+          height: 3.575rem;
+          line-height: 3.575rem;
+          background: url("images/头部.png") no-repeat center;
+          background-size: 100% 100%;
+          text-align: center;
+      }
+      .bgs span{
+        font-size: 1.1rem;
+        font-weight: 500;
+        letter-spacing: 0.88px;
+        color: #ffffff;
+      }
+      .contents{
+        width: 85%;
+        margin: 0 auto;
+        line-height: 1.5rem;
+        padding: 2rem 0 1rem; 
+        /* huanhang */
+        word-break: break-all;
+        font-size: 0.8rem;
+      }
+      .contents .biaoji{
+        font-size: 0.8rem;
+        color: #fb7701;
+      }
+      .contents .yusuan{
+        color: #fb0303;
+        font-size: 0.9rem;
+      }
+      .btns{
+        text-align: center;
+      }
+      
+      @media screen and (max-width: 350px) {
+          .btns button{
+          text-align: center;
+          width: 5.5rem;
+          height: 1.6rem;
+          border-radius: 10px;
+          background-color: #2168fc;
+          border: 1px solid #2168fc;
+          font-size: .65rem;;
+          font-weight: 500;
+          color: #ffffff;
+          margin: 0.5rem auto 0;
+          font-weight: 500;
+        }
+      }
+      @media screen and (min-width: 350px) {
+        .btns button{
+          text-align: center;
+          width: 5.5rem;
+          height: 1.6rem;
+          border-radius: 10px;
+          background-color: #2168fc;
+          border: 1px solid #2168fc;
+          font-size: .65rem;;
+          font-weight: 500;
+          color: #ffffff;
+          margin: 0.5rem auto 0;
+          font-weight: 500;
+          margin-right: 0.5rem;
+        }
+      }
+      .btns .actives{
+        color: #2168fc;
+        font-size: 0.65rem;
+        background: white;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="content">
+        <button class="open-about1">ss</button>  
+    </div> 
+    <!-- About Popup -->
+    <div class="popup popup-about">
+        <button class="close-popup closes"></button>
+        <section class="bgs">
+            <span>活动须知</span>
+        </section>
+        <section class="contents">
+            您申请促销活动的预算是<span class="yusuan">200.00</span>元，您的可用余额必须大于或等于200.00元时，才能新建活动
+            <div class="btns">
+              <button class="actives">我知道了</button>
+              <button>现在就打款</button>
+            </div>
+        </section>
+    </div>
+    <script type='text/javascript' src='http://g.alicdn.com/sj/lib/zepto/zepto.min.js' charset='utf-8'></script>
+    <script type='text/javascript' src='http://g.alicdn.com/msui/sm/0.6.2/js/sm.min.js' charset='utf-8'></script>
+    <script type='text/javascript' src='http://g.alicdn.com/msui/sm/0.6.2/js/sm-extend.min.js' charset='utf-8'></script>
+    <script>
+        $(document).on('click','.open-about1', function () {
+            $.popup('.popup-about');
+        });
+    </script>
+  </body>
+</html>

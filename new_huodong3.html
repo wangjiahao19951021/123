@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>新活动</title>
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <link rel="shortcut icon" href="">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+    <link rel="stylesheet" href="http://g.alicdn.com/msui/sm/0.6.2/css/sm.min.css">
+    <link rel="stylesheet" href="http://g.alicdn.com/msui/sm/0.6.2/css/sm-extend.min.css">
+    <style>
+      body{
+        font-size: 20px;
+        background-color: #ffffff;
+        line-height: normal;
+      }
+      .content{
+        background-color: #ffffff;
+      }
+      .widths{
+        width: 92%;
+        margin: 0 auto;
+      }
+      .huodong_cuxiao{
+        text-align: center;
+        font-size: 0.7rem;
+        font-weight: 500;
+        letter-spacing: 0.56px;
+        color: #333333;
+      }
+      .boxs1{
+        background: white;
+        border-radius: 10px;
+        box-shadow: 0px 1px 14px 0 rgba(0, 0, 0, 0.08);
+      }
+      .boxs1_top{
+        width: 90%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        padding: 0.6rem 0;
+      }
+      .boxs1_top p{
+        line-height: 0;
+        font-size: 0.7rem;
+        font-weight: 500;
+        letter-spacing: 0.56px;
+        color: #050505;
+      }
+      .boxs1_top button{
+        border-radius: 20px;
+        border: solid 1px #2057fb;
+        background-color: #2168fc;
+        font-size: 0.5rem;
+        color: white;
+      }
+      .boxs_lines{
+        width: 100%;
+        height: 2px;
+        background-color: #e5e5e5;
+      }
+      .box_content{
+        width: 100%;
+        padding: 0.5rem 0.75rem;
+      }
+      .box_content p{
+        line-height: 0;
+        font-size: 0.65rem;
+        font-weight: 500;
+        letter-spacing: 0.52px;
+        color: #666666;
+        line-height: 0.5rem;
+      }
+      /* 促销内容 */
+      .boxs_cuxiao{
+        margin-top: 1.2rem;
+      }
+      .boxs_cuxiaos p{
+        line-height: 0;
+      }
+      .boxs_cuxiaos{
+        width: 90%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        line-height: 0;
+        font-size: 0.7rem;
+        font-weight: 500;
+        letter-spacing: 0.56px;
+        color: #050505;
+      }
+      .boxs_cuxiao_content{
+        padding: 0 0.75rem;
+      }
+      .boxs_cuxiao_content p{
+        font-size: 0.65rem;
+        letter-spacing: 0.52px;
+        color: #f87002;
+        text-align: left;
+      }
+      .boxs_cuxiao_contents input{
+        width: 4.65rem;
+        height: 1.25rem;
+        border-radius: 4px;
+        border: solid 1px #ddd9d9;
+        background-color: #ffffff;
+        text-align: center;
+        font-size: 0.65rem;
+        font-weight: 500;
+        color: #fd0101;
+      }
+      .boxs_cuxiao_contents input::placeholder{
+        color: #fd0101;
+        font-size: 0.65rem;
+        font-weight: 500;
+      }
+      .boxs_cuxiao_lines{
+        width: 100%;
+        height: 2px;
+        background-color: #e5e5e5;
+      }
+      .boxs_cuxiaos_bot{
+        margin-top: 0.2rem;
+        padding: 0.3rem 0;
+      }
+      .boxs_cuxiaos_bots{
+        padding: 0 0.75rem;
+        font-size: 0.55rem;
+        font-weight: 500;
+        color: #333333;
+      }
+      .boxs_cuxiaos_bots input{
+        width: 4.65rem;
+        height: 1.25rem;
+        border-radius: 4px;
+        border: solid 1px #ddd9d9;
+        background-color: #ffffff;
+        font-size: 0.65rem;
+        font-weight: 500;
+        text-align: center;
+      }
+      /* 活动预算 */
+      .boxs_budget{
+        background-color: #f9fafb;
+        margin-top: 1.5rem;
+        padding: 0.5rem 0.75rem;
+      }
+      .boxs_budget_title{
+        display: flex;
+        justify-content: space-between;
+        min-height: 1.5rem;
+      }
+      .boxs_budget_title p{
+        line-height: 0;
+        font-size: 0.55rem;
+        font-weight: 500;
+        color: #333333;
+      }
+      .boxs_budget_title .n_d{
+        font-size: 0.75rem;
+        font-weight: 600;
+        color: #fb0000;
+      }
+      .box_times{
+        margin: 0.85rem auto;
+      }
+      .box_times .box_content p{
+        font-size: 0.65rem;
+        letter-spacing: 0.52px;
+        text-align: left;
+        color: #666666;
+      }
+      .btns{
+          width: 92%;
+          margin:  0 auto;
+          text-align: center;
+          margin-top: 1.2rem;
+          margin-bottom: 1.5rem;
+      }
+      .btns button:nth-child(1) {
+        width: 4rem;
+        height: 1.5rem;
+        border-radius: 10px;
+        border: solid 1px #2057fb;
+        background-color: #ffffff;
+        font-size: 0.65rem;
+        font-weight: 500;
+        color: #2057fb;
+        margin-right: 0.5rem;
+      }
+      .btns button:nth-child(2) {
+        width: 4rem;
+        height: 1.5rem;
+        border-radius: 10px;
+        border: solid 1px #2057fb;
+        background-color: #2057fb;
+        font-size: 0.65rem;
+        font-weight: 500;
+        color: #ffffff;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="page">
+        <div class="content">
+            <p class="huodong_cuxiao">促销商品: 林海雪原 矿泉水340ml</p>
+            <section class="boxs1 widths">
+              <div class="boxs1_top">
+                <p>活动场所</p>
+                <button id="picker">选择商户门店</button>
+              </div>
+              <div class="boxs_lines"></div>
+              <div class="box_content">
+                <p>商户: <span>华联超市</span></p>
+                <p>门店: <span>华联超市柳芳地铁站</span></p>
+              </div>
+            </section>
+            <!-- 促销内容 -->
+            <section class="boxs_cuxiao widths">
+              <div class="boxs_cuxiaos">
+                  <p>活动场所</p>
+              </div>
+              <div class="boxs_cuxiao_content">
+                  <p>每买一件临海雪原 矿泉水340ml</p>
+                  <p class="boxs_cuxiao_contents">送 <input type="text" placeholder="10000.00" disabled> 元现金</p>
+              </div>
+              <div class="boxs_cuxiao_lines"></div>
+              <div class="boxs_cuxiaos boxs_cuxiaos_bot">
+                  <p>促销数量</p>
+              </div>
+              <div class="boxs_cuxiaos_bots">
+                  <input type="number">  件
+              </div>
+            </section>
+            <!-- 活动预算 -->
+            <section class="boxs_budget widths">
+              <div class="boxs_budget_title"><p>活动预算</p><p class="n_d">100.00</p></div>
+              <div class="boxs_budget_title"><p>活动服务费</p><p>10.00</p></div>
+              <div class="boxs_budget_title"><p>活动总预算</p><p class="n_d">200.00</p></div>
+              <div class="boxs_budget_title"><p>当前可用余额</p><p>100.00</p></div>
+            </section>
+            <!-- 促销日期 -->
+            <section class="boxs1 widths box_times">
+                <div class="boxs1_top">
+                  <p>促销日期</p>
+                  <button id="times">选择日期</button>
+                  <!-- <input type="button" value="xuanze" id="times"> -->
+                </div>
+                <div class="boxs_lines"></div>
+                <div class="box_content">
+                  <p>2019-06-10 至 2019-06-18</p>
+                </div>
+            </section>
+            <!-- 按钮组 -->
+            <div class="btns">
+                <button>返回</button>
+                <button>下一步</button>
+            </div>
+        </div>
+    </div>
+    
+    <script type='text/javascript' src='http://g.alicdn.com/sj/lib/zepto/zepto.min.js' charset='utf-8'></script>
+    <script type='text/javascript' src='http://g.alicdn.com/msui/sm/0.6.2/js/sm.min.js' charset='utf-8'></script>
+    <script type='text/javascript' src='http://g.alicdn.com/msui/sm/0.6.2/js/sm-extend.min.js' charset='utf-8'></script>
+    <script>
+      $("#picker").picker({
+        toolbarTemplate: '<header class="bar bar-nav">\
+        <button class="button button-link pull-left"></button>\
+        <button class="button button-link pull-right close-picker">确定</button>\
+        <h1 class="title">请选择门店</h1>\
+        </header>',
+        cols: [
+          {
+            textAlign: 'center',
+            values: ['华联超市柳芳地铁站', '华联超市柳芳地铁站', '华联超市柳芳地铁站', '华联超市柳芳地铁站', '华联超市柳芳地铁站']
+          }
+        ]
+      });
+
+
+    </script>
+  </body>
+</html>
