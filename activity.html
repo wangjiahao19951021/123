@@ -156,7 +156,7 @@
         font-weight: 600;
         margin: 0.5rem 0;
         margin-bottom: 0.5rem;
-        line-height: 1.1rem;
+        line-height: 0.75rem;
         padding: 0 0.75rem;
       }
       .box>span>span{
@@ -388,17 +388,16 @@
       addItems(itemsPerLoad, 0);
 
       // 上次加载的序号
-      var lastIndex = 0;
+      var lastIndex = 3;
 
       // 注册'infinite'事件处理函数
       $(document).on('infinite', '.infinite-scroll-bottom',function() {
-console.log(11);
+          alert(1)
           // 如果正在加载，则退出
           if (loading) return;
 
           // 设置flag
           loading = true;
-          // alert(1);
 
           // 模拟1s的加载过程
           setTimeout(function() {
