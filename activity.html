@@ -268,7 +268,7 @@
 
   </head>
   <body>
-    <div class="page page-current">
+    <div class="page">
       <div class="content " >
         <!-- 这里是页面内容区 -->
         <div class="content-block">
@@ -305,7 +305,7 @@
           </div>
         </div>
          <!-- 添加 class infinite-scroll 和 data-distance  向下无限滚动可不加infinite-scroll-bottom类，这里加上是为了和下面的向上无限滚动区分-->
-        <div class="infinite-scroll infinite-scroll-bottom" data-distance="100">
+        <div class="infinite-scroll infinite-scroll-bottom " data-distance="100">
           <div class="boxs">
               <div class="box">
                   <span>时间: <span>2019-06-21 至 2019-07-23</span></span>
@@ -371,8 +371,7 @@
 
     <!-- <script src="http://m.12365auto.com/js/jquery-1.7.2.min.js"></script> -->
     <script>
-      //一定要初始化，无初始化方法滚动无效
-$.init()
+      
       // 加载flag
       var loading = false;
       // 最多可加载的条目
@@ -450,6 +449,10 @@ $.init()
           })
         })()
       })
+
+
+      //一定要初始化，无初始化方法滚动无效
+      $.init()
     </script>
   </body>
 </html>

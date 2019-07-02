@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>活动</title>
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <link rel="shortcut icon" href="">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+    <link rel="stylesheet" href="http://g.alicdn.com/msui/sm/0.6.2/css/sm.min.css">
+    <link rel="stylesheet" href="http://g.alicdn.com/msui/sm/0.6.2/css/sm-extend.min.css">
+    <script type='text/javascript' src='http://g.alicdn.com/sj/lib/zepto/zepto.min.js' charset='utf-8'></script>
+  </head>
+  <body>
+    <div class="page-group">
+        <div class="page page-current">
+            <header class="bar bar-nav">
+                <a class="icon icon-left pull-left"></a>
+                <a class="icon icon-refresh pull-right"></a>
+                <h1 class="title">标题</h1>
+            </header>
+            <!-- 你的html代码 -->
+            <div class="html_body content">
+                <!-- <div class="docs-icons"> -->
+                    <span class="icon icon-app" ></span>
+                    <span class="icon icon-home my-btn" data-panel='#panel-left-demo'></span>
+                <!-- </div> -->
+                <div class="buttons-tab">
+                    <a href="#tab1" class="tab-link active button">全部</a>
+                    <a href="#tab2" class="tab-link button">待付款</a>
+                    <a href="#tab3" class="tab-link button">待发货</a>
+                </div>
+                <svg t="1562036140778" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="4532" width="200" height="200"><path d="M166.464 448.704l212.64 128.736a32 32 0 1 1-33.152 54.72l-266.528-161.312a32 32 0 0 1 4.256-56.928l832-347.456a32 32 0 0 1 43.744 35.52l-145.76 768a32 32 0 0 1-48.576 21.056l-270.208-171.328a32 32 0 0 1 34.24-54.08l230.464 146.112L885.44 148.48 166.464 448.704z" p-id="4533"></path><path d="M416 632.096V896a32 32 0 0 1-64 0v-278.624a32 32 0 0 1 11.2-24.32L752.192 260a32 32 0 0 1 41.6 48.64L416 632.064z" p-id="4534"></path></svg>
+            </div>
+        </div>
+        <!-- 侧边栏 -->
+        <div class="panel-overlay"></div>
+        <!-- Left Panel with Reveal effect -->
+        <div class="panel panel-left panel-reveal theme-dark" id='panel-left-demo'>
+          <div class="content-block">
+            <p>这是一个侧栏</p>
+            <p>你可以在这里放用户设置页面</p>
+            <p><a href="#" class="close-panel">关闭</a></p>
+          </div>
+          <div class="list-block">
+            <!-- .... -->
+          </div>
+        </div>
+    </div>
+
+
+
+    
+
+    <script type='text/javascript' src='http://g.alicdn.com/msui/sm/0.6.2/js/sm.min.js' charset='utf-8'></script>
+    <script type='text/javascript' src='http://g.alicdn.com/msui/sm/0.6.2/js/sm-extend.min.js' charset='utf-8'></script>
+    <!-- <script src="http://m.12365auto.com/js/jquery-1.7.2.min.js"></script> -->
+    <script>
+        $(document).on("click", ".my-btn", function() {
+            $.openPanel("#panel-left-demo");
+        });
+        $.init();
+    </script>
+  </body>
+</html>
