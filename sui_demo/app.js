@@ -18,11 +18,11 @@ let listener=(req,res)=>{
     fs.createReadStream('index1.html').pipe(res);
  } else{
     if(fs.existsSync(`.${req.url}`)) {
-    res.setHeader('Content-Type',mime[req.url.match(/\.\w+$/)[0]] +';charset=utf-8');
-    fs.createReadStream(`.${req.url}`).pipe(res);
+         res.setHeader('Content-Type',mime[req.url.match(/\.\w+$/)[0]] +';charset=utf-8');
+         fs.createReadStream(`.${req.url}`).pipe(res);
     }else{
-    res.statusCode=404;
-        res.end();
+         res.statusCode=404;
+         res.end();
     }
  } 
  
