@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>活动</title>
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <link rel="shortcut icon" href="">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="stylesheet" href="http://g.alicdn.com/msui/sm/0.6.2/css/sm.min.css">
+    <link rel="stylesheet" href="http://g.alicdn.com/msui/sm/0.6.2/css/sm-extend.min.css">
+    <script type='text/javascript' src='http://g.alicdn.com/sj/lib/zepto/zepto.min.js' charset='utf-8'></script>
+    <!-- 使用图片浏览器，你需要在 sm.js 和 sm.css 之后额外引入如下两个文件: -->
+    <link rel="stylesheet" href="http://g.alicdn.com/msui/sm/0.6.2/css/sm-extend.min.css">
+    <script type='text/javascript' src='http://g.alicdn.com/msui/sm/0.6.2/js/sm-extend.min.js' charset='utf-8'></script>
+    <style>
+      .html_body{
+        padding: 3rem 0;
+      }
+        .bar-header-secondary{
+            top: 0;
+        }
+        #my-input{
+            margin: 0 auto 0;
+            width: 95%;
+            display: block;
+        }
+    </style>
+  </head>
+  <body>
+    <div class="page-group">
+        <div class="page page-current">
+            <header class="bar bar-nav">
+                <a class="icon icon-left pull-left"></a>
+                <a class="icon icon-refresh pull-right"></a>
+                <h1 class="title">标题</h1>
+            </header>
+            <!-- 你的html代码 -->
+            <div class="html_body content">
+                <div class="bar bar-header-secondary">
+                    <div class="searchbar">
+                      <a class="searchbar-cancel">取消</a>
+                      <div class="search-input">
+                        <label class="icon icon-search" for="search"></label>
+                        <input type="search" id='search' placeholder='输入关键字...'/>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card demo-card-header-pic">
+                    <div valign="bottom" class="card-header color-white no-border no-padding">
+                      <img class='card-cover' src="file:///D:/%E6%96%B0%E5%AE%89%E8%A3%85/111.png" alt="">
+                    </div>
+                    <div class="card-content">
+                      <div class="card-content-inner">
+                        <p class="color-gray">发表于 2015/01/15</p>
+                        <p>此处是内容...</p>
+                      </div>
+                    </div>
+                    <div class="card-footer">
+                      <a href="#" class="link">赞</a>
+                      <a href="#" class="link">更多</a>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-33" style="text-align: center;">文案</div>
+                    <div class="col-33" style="text-align: center;">文案</div>
+                    <div class="col-33" style="text-align: center;">文案</div>
+                  </div>
+                  <div class="row">
+                    <div class="col-40" style="text-align: center;">文案</div>
+                    <div class="col-60" style="text-align: center;">文案</div>
+                  </div>
+                  <input type="text" id="my-input" placeholder='选择日期...'/>
+                  <p><a href="#" class="button button-fill my-btn" data-panel='#panel-left-demo'>点击显示侧边栏</a></p>
+            </div>
+            <nav class="bar bar-tab">
+              <a class="tab-item external active" href="#">
+                <span class="icon icon-home"></span>
+                <span class="tab-label">文案</span>
+              </a>
+              <a class="tab-item external" href="#">
+                <span class="icon icon-me"></span>
+                <span class="tab-label">文案</span>
+                <span class="badge">2</span>
+              </a>
+              <a class="tab-item external" href="#">
+                <span class="icon icon-star"></span>
+                <span class="tab-label">文案</span>
+              </a>
+              <a class="tab-item external" href="#">
+                <span class="icon icon-cart"></span>
+                <span class="tab-label">文案</span>
+              </a>
+              <a class="tab-item external" href="#">
+                <span class="icon icon-settings"></span>
+                <span class="tab-label">文案</span>
+              </a>
+            </nav>
+        </div>
+    </div>
+    <!-- 侧边栏 -->
+    <div class="panel-overlay"></div>
+    <!-- Left Panel with Reveal effect -->
+    <div class="panel panel-left panel-reveal theme-dark" id='panel-left-demo'>
+      <div class="content-block">
+        <p><a href="#" class="close-panel">关闭</a></p>
+      </div>
+      <div class="list-block">
+        <!-- .... -->
+      </div>
+    </div>
+    <script type='text/javascript' src='http://g.alicdn.com/msui/sm/0.6.2/js/sm.min.js' charset='utf-8'></script>
+    <script type='text/javascript' src='http://g.alicdn.com/msui/sm/0.6.2/js/sm-extend.min.js' charset='utf-8'></script>
+    <!-- <script src="http://m.12365auto.com/js/jquery-1.7.2.min.js"></script> -->
+    <script>
+        $("#my-input").calendar({
+            value: [ new Date().toLocaleDateString() ]
+        });
+        $(document).on("click", ".my-btn", function() {
+            $.openPanel("#panel-left-demo");
+        });
+        $.init();
+    </script> 
+  </body>
+</html>

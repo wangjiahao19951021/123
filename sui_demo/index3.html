@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>活动</title>
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <link rel="shortcut icon" href="">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+    <link rel="stylesheet" href="http://g.alicdn.com/msui/sm/0.6.2/css/sm.min.css">
+    <link rel="stylesheet" href="http://g.alicdn.com/msui/sm/0.6.2/css/sm-extend.min.css">
+    <script type='text/javascript' src='http://g.alicdn.com/sj/lib/zepto/zepto.min.js' charset='utf-8'></script>
+    <link rel="stylesheet" href="http://g.alicdn.com/msui/sm/0.6.2/css/sm-extend.min.css">
+    <script type='text/javascript' src='http://g.alicdn.com/msui/sm/0.6.2/js/sm-extend.min.js' charset='utf-8'></script>
+    <style>
+        .content>img{
+            width: 100px;
+        }
+    </style>
+  </head>
+  <body>
+
+
+    <header class="bar bar-nav">
+        <h1 class="title">图片浏览器</h1>
+    </header>
+    <div class="content">
+        <img class="img" src="https://img.alicdn.com/tps/i3/TB1kt4wHVXXXXb_XVXX0HY8HXXX-1024-1024.jpeg">
+        <img src="https://img.alicdn.com/tps/i1/TB1SKhUHVXXXXb7XXXX0HY8HXXX-1024-1024.jpeg">
+        <img src="https://img.alicdn.com/tps/i4/TB1AdxNHVXXXXasXpXX0HY8HXXX-1024-1024.jpeg">
+    </div>
+
+    
+
+
+
+    
+
+    <script type='text/javascript' src='http://g.alicdn.com/msui/sm/0.6.2/js/sm.min.js' charset='utf-8'></script>
+    <script type='text/javascript' src='http://g.alicdn.com/msui/sm/0.6.2/js/sm-extend.min.js' charset='utf-8'></script>
+    <!-- <script src="http://m.12365auto.com/js/jquery-1.7.2.min.js"></script> -->
+    <script>
+/*=== 默认为 standalone ===*/
+$(function(){
+  /*=== 有标题 ===*/
+  var myPhotoBrowserCaptions = $.photoBrowser({
+      photos : [
+          {
+              url: 'https://img.alicdn.com/tps/i3/TB1kt4wHVXXXXb_XVXX0HY8HXXX-1024-1024.jpeg',
+            //   caption: '1'
+          },
+          {
+            //   url: 'https://img.alicdn.com/tps/i1/TB1SKhUHVXXXXb7XXXX0HY8HXXX-1024-1024.jpeg',
+            //   caption: '2'
+          },
+          // 这个没有标题
+          {
+            //   url: 'https://img.alicdn.com/tps/i4/TB1AdxNHVXXXXasXpXX0HY8HXXX-1024-1024.jpeg',
+            //   caption: '3'
+          },
+      ],
+      theme: 'dark',
+      type: 'standalone'
+  });
+
+
+  $(document).on('click','.img',function () {
+    myPhotoBrowserCaptions.open();
+  });
+})
+        $.init();
+    </script>
+  </body>
+</html>
