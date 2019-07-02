@@ -41,7 +41,9 @@
  
             <!-- 这里是页面内容区 -->
             <div class="content">
-                <div class="content-block">这里是content</div>
+                <div class="content-block">这里是content
+                    <button class="aa"></button>
+                </div>
             </div>
         </div>
  
@@ -70,6 +72,9 @@
         $(document).ready(function () {
             $.init();
         });
+        $(".aa").click(function () {
+            alert(1)
+        })
     </script> 
 </body>
 </html>
